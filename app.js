@@ -15,6 +15,7 @@ import { buildCsv, openPrintableReport } from "./src/report.js";
 
 import { createAnalyticsCharts } from "./src/analyticsCharts.js";
 import { initNavigation, icon, toast } from "./src/ui.js";
+import { renderSidebar } from "./components/sidebar.js";
 import {
   climateMetrics,
   climateInsights,
@@ -914,6 +915,7 @@ async function initOneGlobe(canvasId, pauseId, resetId, loadingId, fallbackId) {
   return controller;
 }
 
+renderSidebar();
 initNavigation();
 initSelectors();
 initMap();
