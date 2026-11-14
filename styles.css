@@ -9,7 +9,7 @@
   --blue: #5f94ff;
   --amber: #f2bf77;
   --text: #e9f0f6;
-  --muted: #8a9eb3;
+  --muted: #b0becd;
   --line: rgba(144, 182, 212, 0.12);
   --danger: #ff9696;
   --sidebar: 228px;
@@ -29,7 +29,7 @@ body {
   min-width: 320px;
   background: var(--bg);
   color: var(--text);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
 }
 button,
@@ -137,9 +137,9 @@ img {
   flex-shrink: 0;
 }
 .nav-caption {
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 0.18em;
-  color: #677f94;
+  color: #6c8498;
   padding: 16px 15px 12px;
   white-space: nowrap;
   font-weight: 700;
@@ -156,7 +156,7 @@ img {
   padding: 12px 14px;
   border-radius: 7px;
   color: #8fa5ba;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
   transition:
@@ -193,25 +193,25 @@ img {
   border-radius: 8px;
   padding: 14px 12px;
   background: radial-gradient(ellipse at top right, #1a897d12, transparent);
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .mission-card strong {
   display: block;
-  font-size: 11px;
+  font-size: 15px;
   color: #c4d5e1;
   margin: 12px 0 6px;
   font-weight: 500;
 }
 .mission-card p {
-  font-size: 10px;
+  font-size: 14px;
   margin: 0;
-  color: #617e95;
+  color: #68849a;
 }
 .collapse-button {
   width: 100%;
   justify-content: flex-start !important;
-  font-size: 11px;
+  font-size: 15px;
   color: var(--muted) !important;
   margin-top: 13px;
   white-space: nowrap;
@@ -266,12 +266,12 @@ img {
   gap: 18px;
 }
 .breadcrumb {
-  font-size: 11px;
+  font-size: 15px;
   color: #6f869b;
 }
 .breadcrumb > span {
   margin: 0 12px;
-  color: #3a4d60;
+  color: #758290;
 }
 .breadcrumb strong {
   font-weight: 500;
@@ -284,7 +284,7 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
 }
@@ -297,7 +297,7 @@ img {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   color: #90a6ba;
 }
@@ -364,7 +364,7 @@ main {
   align-items: center;
   gap: 8px;
   color: var(--cyan);
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 0.16em;
   font-weight: 650;
   margin: 0 0 13px;
@@ -401,7 +401,7 @@ h2 {
   font-weight: 650;
 }
 h3 {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.5;
   font-weight: 600;
   margin: 0;
@@ -414,7 +414,7 @@ h3 {
 }
 .hero-text {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   max-width: 360px;
   line-height: 1.9;
   margin-bottom: 25px;
@@ -434,7 +434,7 @@ h3 {
   justify-content: center;
   gap: 9px;
   color: #c0d1e0;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   background: #ffffff03;
   transition:
@@ -467,7 +467,7 @@ h3 {
   border-color: transparent;
   color: #7e99b0;
   padding: 3px;
-  font-size: 10px;
+  font-size: 14px;
   min-height: 28px;
 }
 .btn.secondary {
@@ -475,7 +475,7 @@ h3 {
 }
 .btn.small {
   min-height: 37px;
-  font-size: 10px;
+  font-size: 14px;
   padding: 8px 12px;
 }
 .icon-button {
@@ -515,7 +515,7 @@ h3 {
   gap: 18px;
   margin-top: 25px;
   color: #718da5;
-  font-size: 9px;
+  font-size: 13px;
 }
 .hero-proof > span {
   display: flex;
@@ -565,7 +565,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   color: #83a1b6;
   pointer-events: none;
@@ -576,7 +576,7 @@ h3 {
   align-items: center;
 }
 .hud-tag {
-  font-size: 7px;
+  font-size: 11px;
   border: 1px solid #80acbd23;
   border-radius: 4px;
   padding: 5px 8px;
@@ -593,14 +593,14 @@ h3 {
   pointer-events: none;
 }
 .micro-label {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   font-weight: 600;
   color: #728ba1;
 }
 .globe-bottom strong {
   display: block;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 500;
   color: #c3dce7;
   margin-top: 3px;
@@ -608,8 +608,8 @@ h3 {
 }
 .globe-hint {
   display: block;
-  color: #59778e;
-  font-size: 8px;
+  color: #688499;
+  font-size: 12px;
   margin-top: 5px;
 }
 .globe-buttons {
@@ -644,7 +644,7 @@ h3 {
   justify-content: center;
   flex-direction: column;
   gap: 12px;
-  font-size: 11px;
+  font-size: 15px;
   color: var(--muted);
 }
 .globe-loading img {
@@ -670,11 +670,11 @@ h3 {
 }
 .context-strip > div > span {
   color: #708ba1;
-  font-size: 9px;
+  font-size: 13px;
 }
 .context-strip strong {
   display: block;
-  font-size: 11px;
+  font-size: 15px;
   color: #c3d6e2;
   font-weight: 500;
   margin-top: 2px;
@@ -684,7 +684,7 @@ h3 {
   gap: 7px;
 }
 .context-strip .data-status span:last-child {
-  font-size: 10px;
+  font-size: 14px;
   color: #83a7b8;
 }
 .section-heading {
@@ -695,7 +695,7 @@ h3 {
   margin-bottom: 22px;
 }
 .section-heading p:not(.eyebrow) {
-  font-size: 11px;
+  font-size: 15px;
   color: var(--muted);
   margin: 0;
 }
@@ -703,9 +703,9 @@ h3 {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.06em;
-  color: #5c7f95;
+  color: #63859a;
   white-space: nowrap;
 }
 .section-tag .icon {
@@ -739,7 +739,7 @@ h3 {
   margin-bottom: 2px;
 }
 .control-title h3 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 .control-title .icon {
@@ -750,7 +750,7 @@ h3 {
 label {
   display: grid;
   gap: 6px;
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 500;
   color: #90a6b9;
   letter-spacing: 0.02em;
@@ -763,7 +763,7 @@ select {
   border-radius: 5px;
   width: 100%;
   padding: 10px 11px;
-  font-size: 11px;
+  font-size: 15px;
   min-height: 37px;
   outline: none;
 }
@@ -772,7 +772,7 @@ select:focus {
   border-color: #51dbe65c;
 }
 input::placeholder {
-  color: #506b81;
+  color: #6d8496;
 }
 select option {
   background: #0c1929;
@@ -789,14 +789,14 @@ select option {
   border-top: 1px solid var(--line);
 }
 .metadata p {
-  font-size: 10px;
-  color: #647f97;
+  font-size: 14px;
+  color: #69849b;
   margin: 4px 0 0;
   overflow-wrap: anywhere;
 }
 .metadata p:first-of-type {
   font-variant-numeric: tabular-nums;
-  font-size: 12px;
+  font-size: 14px;
   color: #b2d3dd;
 }
 .map-shell {
@@ -831,7 +831,7 @@ select option {
   border: 0;
   padding: 6px 12px;
   border-radius: 4px;
-  font-size: 10px;
+  font-size: 14px;
 }
 .segmented .icon {
   width: 14px;
@@ -843,7 +843,7 @@ select option {
   box-shadow: 0 1px 4px #0002;
 }
 .explorer-toolbar > span {
-  font-size: 9px;
+  font-size: 13px;
   color: #6c8a9c;
   display: flex;
   align-items: center;
@@ -895,7 +895,7 @@ select option {
 .leaflet-control-attribution {
   background: #081522e8 !important;
   color: #91aabb !important;
-  font-size: 8px !important;
+  font-size: 12px !important;
 }
 .leaflet-control-attribution a {
   color: #83c4d2 !important;
@@ -910,7 +910,7 @@ select option {
   gap: 9px;
   align-items: center;
   pointer-events: none;
-  font-size: 9px;
+  font-size: 13px;
   color: #b9d0dc;
   max-width: max-content;
   border: 1px solid #71a4bc2a;
@@ -932,10 +932,10 @@ select option {
   gap: 10px;
 }
 .metric-heading h3 {
-  font-size: 13px;
+  font-size: 15px;
 }
 .metric-heading > span {
-  font-size: 9px;
+  font-size: 13px;
   color: #6a879e;
 }
 .climate-grid {
@@ -974,7 +974,7 @@ select option {
 }
 .climate-card .metric-label {
   color: #92aabd;
-  font-size: 9px;
+  font-size: 13px;
 }
 .climate-card strong {
   display: block;
@@ -987,7 +987,7 @@ select option {
   color: #ddecf3;
 }
 .climate-card strong small {
-  font-size: 10px;
+  font-size: 14px;
   color: #6f93a7;
   margin-left: 4px;
   font-weight: 400;
@@ -995,8 +995,8 @@ select option {
 }
 .climate-card p {
   margin: 3px 0 0;
-  font-size: 8px;
-  color: #647f96;
+  font-size: 12px;
+  color: #69849a;
 }
 .climate-card .sparkline {
   position: absolute;
@@ -1007,14 +1007,14 @@ select option {
   opacity: 0.6;
 }
 .metric-placeholder {
-  color: #3c5c73 !important;
+  color: #6b8495 !important;
 }
 .text-link {
   display: flex;
   gap: 5px;
   align-items: center;
   color: #71c6ca;
-  font-size: 10px;
+  font-size: 14px;
 }
 .text-link .icon {
   width: 14px;
@@ -1032,11 +1032,11 @@ select option {
   margin-bottom: 20px;
 }
 .panel-title .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   margin-bottom: 6px;
 }
 .panel-title h3 {
-  font-size: 15px;
+  font-size: 17px;
 }
 .panel-actions {
   display: flex;
@@ -1067,7 +1067,7 @@ select option {
 }
 .chart-controls input,
 .chart-controls select {
-  font-size: 10px;
+  font-size: 14px;
   padding-inline: 9px;
 }
 .chart-legend {
@@ -1081,7 +1081,7 @@ select option {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 9px;
+  font-size: 13px;
   color: #849db2;
   cursor: pointer;
 }
@@ -1103,8 +1103,8 @@ select option {
 }
 .chart-hint {
   margin-left: auto;
-  color: #506f88;
-  font-size: 8px;
+  color: #698499;
+  font-size: 12px;
 }
 .echart {
   width: 100%;
@@ -1149,11 +1149,11 @@ select option {
   color: #6ecfcd;
 }
 .chart-empty h3 {
-  font-size: 15px;
+  font-size: 17px;
   color: #a7c1d3;
 }
 .chart-empty p {
-  font-size: 11px;
+  font-size: 15px;
   color: #69859d;
   margin-top: 7px;
   margin-bottom: 20px;
@@ -1169,14 +1169,14 @@ select option {
 .chart-footer p {
   margin: 0;
   max-width: 75%;
-  font-size: 9px;
+  font-size: 13px;
   color: #67849b;
   line-height: 1.8;
 }
 .chart-footer > span {
-  font-size: 8px;
+  font-size: 12px;
   white-space: nowrap;
-  color: #56738a;
+  color: #6a8498;
 }
 .notice {
   border: 1px solid #5bbdc831;
@@ -1185,7 +1185,7 @@ select option {
   margin: 14px 0;
   background: #3b9dad09;
   color: #98c6d0;
-  font-size: 11px;
+  font-size: 15px;
 }
 .notice.error {
   border-color: #ff969638;
@@ -1246,22 +1246,22 @@ select option {
 .summary-card span {
   display: block;
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: 12px;
   color: #7592a7;
   letter-spacing: 0.07em;
 }
 .summary-card strong {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #c4d8e6;
   margin: 8px 0 5px;
   overflow-wrap: anywhere;
 }
 .summary-card p {
-  font-size: 8px;
+  font-size: 12px;
   margin: 0;
-  color: #5f7a91;
+  color: #6a8499;
 }
 .analytics-grid {
   display: grid;
@@ -1284,7 +1284,7 @@ select option {
   margin-top: 8px;
 }
 .period-panel > p:last-child {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.9;
   color: #8ba7bb;
   background: #0915238a;
@@ -1294,7 +1294,7 @@ select option {
   margin: 5px 0 0;
 }
 .limitation {
-  font-size: 10px;
+  font-size: 14px;
   color: #7590a6;
   line-height: 1.8;
   margin: 12px 0;
@@ -1314,7 +1314,7 @@ select option {
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 14px;
 }
 .check-item input {
   width: 13px;
@@ -1337,7 +1337,7 @@ select option {
   padding: 12px;
   color: #b7d2df;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 14px;
   text-align: left;
 }
 .slope-row:hover {
@@ -1349,7 +1349,7 @@ select option {
 .slope-row em {
   font-style: normal;
   color: #738fa4;
-  font-size: 9px;
+  font-size: 13px;
 }
 .bar {
   display: block;
@@ -1376,17 +1376,17 @@ select option {
   margin-bottom: 16px;
 }
 .insight-card .insight-kind {
-  font-size: 8px;
+  font-size: 12px;
   color: #5ab9b8;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .insight-card h3 {
   margin: 6px 0 10px;
-  font-size: 13px;
+  font-size: 15px;
 }
 .insight-card p {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.9;
   color: #829fb5;
   margin: 0;
@@ -1403,7 +1403,7 @@ select option {
   color: #53adb9;
 }
 .insight-empty p {
-  font-size: 11px;
+  font-size: 15px;
   margin: 12px 0 0;
 }
 .assistant-panel {
@@ -1414,7 +1414,7 @@ select option {
   padding: 24px;
 }
 .assistant-panel > div > p:not(.eyebrow) {
-  font-size: 10px;
+  font-size: 14px;
   color: #69859d;
   margin: 12px 0 0;
   max-width: 300px;
@@ -1427,7 +1427,7 @@ select option {
   margin-bottom: 12px;
 }
 .prompt-list button {
-  font-size: 9px;
+  font-size: 13px;
   padding: 7px 10px;
   border: 1px solid #6aabb427;
   color: #8dc4cc;
@@ -1438,7 +1438,7 @@ select option {
   border-color: var(--cyan);
 }
 .answer {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.9;
   color: #9bb5c8;
   padding: 14px;
@@ -1460,7 +1460,7 @@ select option {
   font-size: 24px;
 }
 .report-panel p:not(.eyebrow) {
-  font-size: 11px;
+  font-size: 15px;
   color: #7d9bb0;
   max-width: 520px;
   line-height: 1.9;
@@ -1500,7 +1500,7 @@ select option {
   margin-top: -20px;
 }
 .about-brand p {
-  font-size: 10px;
+  font-size: 14px;
   color: #66859b;
   line-height: 2;
 }
@@ -1508,7 +1508,7 @@ select option {
   font-size: 25px;
 }
 .sources p:not(.eyebrow) {
-  font-size: 10px;
+  font-size: 14px;
   color: #6d8da4;
   line-height: 2;
 }
@@ -1519,7 +1519,7 @@ select option {
   margin-top: 22px;
 }
 .source-links a {
-  font-size: 9px;
+  font-size: 13px;
   color: #82bbcc;
   display: flex;
   gap: 5px;
@@ -1530,17 +1530,17 @@ select option {
   height: 12px;
 }
 .sources .asset-credit {
-  font-size: 8px !important;
+  font-size: 12px !important;
   margin-top: 20px;
-  color: #45667f !important;
+  color: #698498 !important;
 }
 footer {
   border-top: 1px solid var(--line);
   padding: 22px 0 30px;
   display: flex;
   justify-content: space-between;
-  color: #496b82;
-  font-size: 8px;
+  color: #688598;
+  font-size: 12px;
 }
 footer > span:nth-child(2) {
   display: flex;
@@ -1556,7 +1556,7 @@ footer > span:nth-child(2) {
   background: #142d3b;
   border: 1px solid #62cfcb4d;
   color: #b4e4e4;
-  font-size: 12px;
+  font-size: 14px;
   max-width: min(420px, calc(100vw - 40px));
   border-radius: 8px;
   padding: 13px 20px;
@@ -1585,8 +1585,8 @@ footer > span:nth-child(2) {
   z-index: 65;
 }
 .texture-credit {
-  font-size: 8px;
-  color: #496b82;
+  font-size: 12px;
+  color: #688598;
 }
 .map-status {
   position: absolute;
@@ -1599,7 +1599,7 @@ footer > span:nth-child(2) {
   color: #aac9d5;
   border-radius: 5px;
   padding: 7px 10px;
-  font-size: 9px;
+  font-size: 13px;
   pointer-events: none;
 }
 
@@ -1658,16 +1658,16 @@ footer > span:nth-child(2) {
     height: 540px;
   }
   .hero-text {
-    font-size: 15px;
+    font-size: 17px;
   }
   .hero-copy {
     padding-left: 20px;
   }
   .hero-proof {
-    font-size: 11px;
+    font-size: 15px;
   }
   .hero .eyebrow {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 @media (max-width: 1250px) {
@@ -1678,7 +1678,7 @@ footer > span:nth-child(2) {
     padding-inline: 11px;
   }
   .sidebar nav a {
-    font-size: 11px;
+    font-size: 15px;
     gap: 10px;
     padding-inline: 12px;
   }
@@ -1698,12 +1698,12 @@ footer > span:nth-child(2) {
     gap: 7px;
   }
   .hero-actions .btn {
-    font-size: 10px;
+    font-size: 14px;
     padding: 10px;
   }
   .hero-proof {
     gap: 10px;
-    font-size: 8px;
+    font-size: 12px;
   }
   .earth-stage {
     height: 425px;
@@ -1870,7 +1870,7 @@ footer > span:nth-child(2) {
     gap: 10px;
   }
   .breadcrumb {
-    font-size: 10px;
+    font-size: 14px;
   }
   .breadcrumb > span {
     margin-inline: 5px;
@@ -1886,7 +1886,7 @@ footer > span:nth-child(2) {
     display: none;
   }
   .source-badge {
-    font-size: 8px;
+    font-size: 12px;
   }
   .topbar .logo-crop {
     width: 34px;
@@ -1915,11 +1915,11 @@ footer > span:nth-child(2) {
     font-size: 44px;
   }
   .hero-text {
-    font-size: 12px;
+    font-size: 14px;
     max-width: 420px;
   }
   .hero-proof {
-    font-size: 9px;
+    font-size: 13px;
     margin-top: 20px;
     gap: 17px;
   }
@@ -1928,10 +1928,10 @@ footer > span:nth-child(2) {
     margin-top: 20px;
   }
   .hero .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .hero-actions .btn {
-    font-size: 11px;
+    font-size: 15px;
     padding: 11px 14px;
   }
   .globe-hud {
@@ -1951,10 +1951,10 @@ footer > span:nth-child(2) {
     width: 15px;
   }
   .context-strip > div > span {
-    font-size: 8px;
+    font-size: 12px;
   }
   .context-strip strong {
-    font-size: 9px;
+    font-size: 13px;
   }
   .section {
     padding: 30px 0;
@@ -1968,7 +1968,7 @@ footer > span:nth-child(2) {
     max-width: 90%;
   }
   .section-heading p:not(.eyebrow) {
-    font-size: 10px;
+    font-size: 14px;
   }
   .workspace {
     grid-template-columns: 1fr;
@@ -2011,7 +2011,7 @@ footer > span:nth-child(2) {
     min-height: 350px;
   }
   .map-note {
-    font-size: 8px;
+    font-size: 12px;
     left: 10px;
     right: 10px;
     max-width: none;
@@ -2035,10 +2035,10 @@ footer > span:nth-child(2) {
   .metric-heading > span {
     max-width: 45%;
     text-align: right;
-    font-size: 8px;
+    font-size: 12px;
   }
   .metric-heading h3 {
-    font-size: 11px;
+    font-size: 15px;
   }
   .chart-panel {
     padding: 17px;
@@ -2071,7 +2071,7 @@ footer > span:nth-child(2) {
   }
   .chart-footer p {
     max-width: 100%;
-    font-size: 8px;
+    font-size: 12px;
   }
   .summary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2087,10 +2087,10 @@ footer > span:nth-child(2) {
     align-items: start;
   }
   .regional-panel .panel-title h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
   .regional-panel .btn {
-    font-size: 9px;
+    font-size: 13px;
     padding: 8px;
   }
   .slope-row {
@@ -2102,7 +2102,7 @@ footer > span:nth-child(2) {
     grid-row: 1;
   }
   .slope-row em {
-    font-size: 8px;
+    font-size: 12px;
   }
   .insight-grid {
     grid-template-columns: 1fr;
@@ -2139,7 +2139,7 @@ footer > span:nth-child(2) {
     margin: 0 0 0 -10px;
   }
   .about-brand p {
-    font-size: 9px;
+    font-size: 13px;
   }
   .sources h2 {
     font-size: 24px;
@@ -2148,20 +2148,20 @@ footer > span:nth-child(2) {
     gap: 15px;
   }
   .text-link {
-    font-size: 9px;
+    font-size: 13px;
     white-space: nowrap;
   }
   .chart-empty {
     min-height: 300px;
   }
   .chart-empty h3 {
-    font-size: 13px;
+    font-size: 15px;
   }
   .chart-empty p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .panel-title h3 {
-    font-size: 13px;
+    font-size: 15px;
     overflow-wrap: anywhere;
   }
   .chart-expanded .chart-controls {
@@ -2174,7 +2174,7 @@ footer > span:nth-child(2) {
     min-height: 180px;
   }
   footer {
-    font-size: 7px;
+    font-size: 11px;
   }
   footer > span:nth-child(2) {
     display: none;
@@ -2258,7 +2258,7 @@ footer > span:nth-child(2) {
   flex-shrink: 0;
 }
 .ai-identity .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   margin: 0 0 4px;
 }
 .ai-identity h3 {
@@ -2271,7 +2271,7 @@ footer > span:nth-child(2) {
 #aiProvider {
   color: #6c91a8;
   font:
-    400 9px "DM Sans",
+    400 13px4210642104 "DM Sans",
     sans-serif;
 }
 .ai-context {
@@ -2281,7 +2281,7 @@ footer > span:nth-child(2) {
   color: #8fb6c9;
   border: 1px solid var(--line);
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 14px;
   overflow-wrap: anywhere;
 }
 .ai-messages {
@@ -2294,7 +2294,7 @@ footer > span:nth-child(2) {
   gap: 15px;
   padding: 22px 3px;
   scrollbar-width: thin;
-  scrollbar-color: #315467 #091522;
+  scrollbar-color: #6b8592 #091522;
 }
 .ai-chat-empty {
   margin: auto;
@@ -2310,13 +2310,13 @@ footer > span:nth-child(2) {
 }
 .ai-chat-empty h4 {
   font:
-    600 15px "Manrope",
+    600 17px42864 "Manrope",
     sans-serif;
   color: #b3cddc;
   margin: 0 0 9px;
 }
 .ai-chat-empty p {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.9;
   margin: 0;
 }
@@ -2341,7 +2341,7 @@ footer > span:nth-child(2) {
   align-items: center;
   gap: 25px;
   color: #78cbce;
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 9px;
 }
 .ai-message.user .ai-message-header {
@@ -2351,7 +2351,7 @@ footer > span:nth-child(2) {
   font-weight: 500;
 }
 .copy-answer {
-  font-size: 9px;
+  font-size: 13px;
   color: #7099b0;
   background: none;
   border: 1px solid var(--line);
@@ -2363,7 +2363,7 @@ footer > span:nth-child(2) {
   border-color: #51dbe640;
 }
 .ai-message-body {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
   color: #a8c2d3;
   white-space: pre-wrap;
@@ -2377,7 +2377,7 @@ footer > span:nth-child(2) {
 .ai-message-body h4 {
   margin: 17px 0 6px;
   font:
-    600 13px "Manrope",
+    600 15px44126 "Manrope",
     sans-serif;
   color: #cce2ec;
 }
@@ -2404,7 +2404,7 @@ footer > span:nth-child(2) {
 }
 .ai-message-body code,
 .ai-message-body pre {
-  font-size: 11px;
+  font-size: 15px;
   padding: 2px 5px;
   background: #050e18;
   color: #a2dcd8;
@@ -2415,8 +2415,8 @@ footer > span:nth-child(2) {
   padding: 12px;
 }
 .ai-message-context {
-  font-size: 8px;
-  color: #577e95;
+  font-size: 12px;
+  color: #61869b;
   border-top: 1px solid var(--line);
   padding-top: 9px;
   margin-top: 12px;
@@ -2434,7 +2434,7 @@ footer > span:nth-child(2) {
   background: #17414b1a;
   color: #8dbdc7;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 14px;
   text-align: left;
 }
 .ai-suggestions button:hover:not(:disabled) {
@@ -2460,7 +2460,7 @@ footer > span:nth-child(2) {
   border: none;
   color: #d2e5ed;
   font:
-    400 12px/1.7 "DM Sans",
+    400 14px45731/1.7 "DM Sans",
     sans-serif;
   padding: 4px;
 }
@@ -2471,15 +2471,15 @@ footer > span:nth-child(2) {
   border-color: #5bd8d66b;
 }
 .ai-composer textarea::placeholder {
-  color: #55758e;
+  color: #68849a;
 }
 .ai-composer .btn {
   min-height: 37px;
   padding: 8px 14px;
 }
 .ai-disclosure {
-  font-size: 9px;
-  color: #57778f;
+  font-size: 13px;
+  color: #68849a;
   margin: 11px 0 0;
   line-height: 1.9;
 }
@@ -2488,7 +2488,7 @@ footer > span:nth-child(2) {
   align-items: center;
   gap: 4px;
   color: #6b9aae;
-  font-size: 10px;
+  font-size: 14px;
   padding: 0 4px 14px;
 }
 .ai-typing span {
@@ -2535,14 +2535,14 @@ footer > span:nth-child(2) {
     height: 30px;
   }
   .ai-identity .eyebrow {
-    font-size: 6px;
+    font-size: 10px;
   }
   .ai-identity h3 {
-    font-size: 14px;
+    font-size: 16px;
     gap: 3px;
   }
   .ai-chat-header .btn {
-    font-size: 8px;
+    font-size: 12px;
   }
   .ai-chat-header .btn .icon {
     display: none;
@@ -2555,7 +2555,7 @@ footer > span:nth-child(2) {
     padding: 13px;
   }
   .ai-message-body {
-    font-size: 11px;
+    font-size: 15px;
   }
   .ai-messages {
     max-height: 470px;
@@ -2567,18 +2567,18 @@ footer > span:nth-child(2) {
     padding: 10px;
   }
   .ai-suggestions button {
-    font-size: 9px;
+    font-size: 13px;
   }
   #generateAiInsights {
-    font-size: 9px;
+    font-size: 13px;
     padding: 8px;
   }
   #askChartAi {
-    font-size: 9px;
+    font-size: 13px;
     padding: 7px;
   }
   .ai-disclosure {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

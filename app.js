@@ -16,6 +16,14 @@ import { buildCsv, openPrintableReport } from "./src/report.js";
 import { createAnalyticsCharts } from "./src/analyticsCharts.js";
 import { initNavigation, icon, toast } from "./src/ui.js";
 import { renderSidebar } from "./components/sidebar.js";
+import { renderTopbar } from "./components/topbar.js";
+import { renderOverview } from "./pages/overview.js";
+import { renderEarthExplorer } from "./pages/earth-explorer.js";
+import { renderHistoricalClimate } from "./pages/historical-climate.js";
+import { renderClimateAnalytics } from "./pages/climate-analytics.js";
+import { renderDataInsights } from "./pages/data-insights.js";
+import { renderDataExport } from "./pages/data-export.js";
+import { renderAbout } from "./pages/about.js";
 import {
   climateMetrics,
   climateInsights,
@@ -916,6 +924,14 @@ async function initOneGlobe(canvasId, pauseId, resetId, loadingId, fallbackId) {
 }
 
 renderSidebar();
+renderTopbar();
+renderOverview();
+renderEarthExplorer();
+renderHistoricalClimate();
+renderClimateAnalytics();
+renderDataInsights();
+renderDataExport();
+renderAbout();
 initNavigation();
 initSelectors();
 initMap();

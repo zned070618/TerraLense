@@ -48,8 +48,8 @@ const palette = [
   "#64a9b0",
 ];
 const labels = {
-  color: "#7896ae",
-  fontSize: 10,
+  color: "#a7bacb",
+  fontSize: 14,
   fontFamily: "DM Sans, sans-serif",
 };
 function axis(name = "") {
@@ -80,7 +80,7 @@ function base() {
       confine: true,
       backgroundColor: "#132a3b",
       borderColor: "#315569",
-      textStyle: { color: "#d7eaf2", fontSize: 11 },
+      textStyle: { color: "#d7eaf2", fontSize: 15 },
       axisPointer: { lineStyle: { color: "#4e7a8f" } },
     },
     grid: { top: 42, left: 65, right: 30, bottom: 74 },
@@ -114,7 +114,7 @@ function timeline(observations) {
         backgroundColor: "#0b1826",
         fillerColor: "#51dbe614",
         handleStyle: { color: "#316f80", borderColor: "#61b9c7" },
-        textStyle: { ...labels, fontSize: 8 },
+        textStyle: { ...labels, fontSize: 12 },
         dataBackground: {
           lineStyle: { color: "#38657b" },
           areaStyle: { color: "#173a4b" },
@@ -141,7 +141,7 @@ export function createAnalyticsCharts() {
       text: "Your annual cycle will appear here",
       left: "center",
       top: "center",
-      textStyle: { fontSize: 11, color: "#56778f", fontWeight: 400 },
+      textStyle: { fontSize: 15, color: "#a7bacb", fontWeight: 400 },
     },
     series: [],
   });
@@ -249,7 +249,7 @@ export function createAnalyticsCharts() {
                 },
                 label: {
                   color: "#8daabc",
-                  fontSize: 10,
+                  fontSize: 14,
                   formatter: "{b}: {d}%",
                 },
                 labelLine: { lineStyle: { color: "#355a70" } },
@@ -266,7 +266,7 @@ export function createAnalyticsCharts() {
           text: "No complete rainfall years available",
           left: "center",
           top: "center",
-          textStyle: { fontSize: 12, color: "#7896ae", fontWeight: 400 },
+          textStyle: { fontSize: 14, color: "#a7bacb", fontWeight: 400 },
         };
     } else if (type === "heatmap") {
       const series = dataset.series[parameter];
@@ -435,7 +435,7 @@ export function createAnalyticsCharts() {
           text: "No valid observations in this view",
           left: "center",
           top: "center",
-          textStyle: { fontSize: 12, color: "#7896ae", fontWeight: 400 },
+          textStyle: { fontSize: 14, color: "#a7bacb", fontWeight: 400 },
         };
       note =
         resolution === "yearly"

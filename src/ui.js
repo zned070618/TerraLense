@@ -87,24 +87,45 @@ export function initNavigation() {
     });
   const links = [...document.querySelectorAll("#sideNav a")];
   links.forEach((link) => link.addEventListener("click", close));
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const entry = entries
-        .filter((item) => item.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!entry) return;
-      links.forEach((link) => {
-        const active = link.hash === `#${entry.target.id}`;
-        link.classList.toggle("active", active);
-        if (active) link.setAttribute("aria-current", "location");
-        else link.removeAttribute("aria-current");
-      });
-      document.querySelector("#activeSection").textContent =
-        entry.target.dataset.nav;
-    },
-    { rootMargin: "-15% 0px -55% 0px", threshold: [0, 0.1, 0.3] },
-  );
-  document
-    .querySelectorAll("section[data-nav]")
-    .forEach((section) => observer.observe(section));
+  const sections = [...document.querySelectorAll("section[data-nav]")];
+  const updateActiveSection = () => {
+    const activationLine = window.innerHeight * 0.3;
+    const atPageBottom =
+      window.scrollY + window.innerHeight >=
+      document.documentElement.scrollHeight - 1;
+    let activeSection = atPageBottom
+      ? sections[sections.length - 1]
+      : sections[0];
+    if (!atPageBottom) {
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top > activationLine) break;
+        activeSection = section;
+      }
+    }
+    if (!activeSection) return;
+
+    links.forEach((link) => {
+      const active = link.hash === `#${activeSection.id}`;
+      link.classList.toggle("active", active);
+      if (active) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+    document.querySelector("#activeSection").textContent =
+      activeSection.dataset.nav;
+  };
+  let updateScheduled = false;
+  const scheduleActiveSectionUpdate = () => {
+    if (updateScheduled) return;
+    updateScheduled = true;
+    requestAnimationFrame(() => {
+      updateScheduled = false;
+      updateActiveSection();
+    });
+  };
+  window.addEventListener("scroll", scheduleActiveSectionUpdate, {
+    passive: true,
+  });
+  window.addEventListener("resize", scheduleActiveSectionUpdate);
+  window.addEventListener("hashchange", scheduleActiveSectionUpdate);
+  updateActiveSection();
 }
