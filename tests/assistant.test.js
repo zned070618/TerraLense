@@ -139,7 +139,7 @@ test("chart context rejects client measurements and periods outside the verified
     /does not match/,
   );
 });
-test("grounding rejects invented evidence, model-written numbers and markup", () => {
+test("grounding drops invalid citations and numerical prose, then falls back to verified evidence", () => {
   const facts = computeEvidence(fixture(), chart);
   for (const response of [
     { sections: [{ ...grounded().sections[0], evidenceIds: ["invented"] }] },
@@ -153,12 +153,31 @@ test("grounding rejects invented evidence, model-written numbers and markup", ()
         { ...grounded().sections[0], explanation: "<script>alert()</script>" },
       ],
     },
-  ])
-    assert.throws(
-      () =>
-        assembleGroundedAnswer(response, facts, "https://power.larc.nasa.gov"),
-      /unverified/,
+  ]) {
+    const answer = assembleGroundedAnswer(
+      response,
+      facts,
+      "https://power.larc.nasa.gov",
     );
+    assert.match(answer.answer, /could not validate a generated explanation/);
+    assert.doesNotMatch(answer.answer, /invented|temperature is 999 C|<script>/i);
+    assert.ok(answer.evidence.length > 0);
+  }
+  const manyCitations = facts.slice(0, 10).map((fact) => fact.id),
+    trimmed = assembleGroundedAnswer(
+      {
+        sections: [
+          {
+            heading: "Climate evidence",
+            explanation: "The selected series shows the verified climate record.",
+            evidenceIds: manyCitations,
+          },
+        ],
+      },
+      facts,
+      "https://power.larc.nasa.gov",
+    );
+  assert.equal(trimmed.evidence.length, 8);
   const answer = assembleGroundedAnswer(
     grounded(),
     facts,
@@ -332,7 +351,7 @@ test("changed locations and year ranges receive distinct verified identifiers an
   );
 });
 test("Gemini authentication/quota errors and secrets stay on the server", async () => {
-  for (const status of [401, 403, 429, 503]) {
+  for (const status of [401, 403, 429]) {
     await assert.rejects(
       generateGeminiAnswer({
         config: { key: "private-test-key", model: "gemini-test" },
@@ -353,4 +372,32 @@ test("Gemini authentication/quota errors and secrets stay on the server", async 
         error.code.startsWith("GEMINI_"),
     );
   }
+});
+test("Gemini retries a temporary 503 and returns the recovered answer", async () => {
+  let calls = 0;
+  const result = await generateGeminiAnswer({
+    config: { key: "private-test-key", model: "gemini-test" },
+    question: "Explain",
+    facts: [],
+    chart,
+    history: [],
+    mode: "chat",
+    fetchImpl: async () => {
+      calls++;
+      if (calls === 1) return { ok: false, status: 503 };
+      return {
+        ok: true,
+        json: async () => ({
+          candidates: [
+            {
+              finishReason: "STOP",
+              content: { parts: [{ text: '{"sections":[]}' }] },
+            },
+          ],
+        }),
+      };
+    },
+  });
+  assert.deepEqual(result, { sections: [] });
+  assert.equal(calls, 2);
 });

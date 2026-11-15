@@ -16,9 +16,7 @@ export function renderEarthExplorer() {
           <h2>Your next discovery starts here.</h2>
           <p>Choose a point on Earth and a moment in its climate history.</p>
         </div>
-        <span class="section-tag"
-          ><i data-icon="pin"></i> POINT-BASED OBSERVATIONS</span
-        >
+        <span class="section-tag">POINT-BASED OBSERVATIONS</span>
       </div>
       <div class="workspace">
         <aside
@@ -29,7 +27,21 @@ export function renderEarthExplorer() {
             <i data-icon="sliders"></i>
             <h3>Define your investigation</h3>
           </div>
-          <label>Quick location<select id="locationSelect"></select></label>
+          <div class="location-search">
+            <label for="locationSearch">Search location</label>
+            <input
+              id="locationSearch"
+              type="search"
+              placeholder="Search any place"
+              autocomplete="off"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="locationSuggestions"
+            />
+            <ul id="locationSuggestions" class="location-suggestions" role="listbox" hidden></ul>
+            <span class="location-search-credit">Search results © OpenStreetMap contributors · Photon</span>
+          </div>
           <div class="coord-grid">
             <label
               >Latitude<input

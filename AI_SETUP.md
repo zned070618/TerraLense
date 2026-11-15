@@ -24,7 +24,7 @@ The backend independently fetches NASA POWER data, issues a session-owned datase
 
 Sessions and datasets expire after thirty minutes. This single-process implementation bounds caches and conversation history, limits requests by the actual connecting IP, and allows two simultaneous Gemini generations. It does not trust forwarded IP headers. For a multi-instance/public deployment, move sessions and rate limits to shared storage and apply authenticated user limits at the proxy. Do not expose the development server publicly as a production service.
 
-Gemini generates explanations and selects verified evidence IDs. The server rejects unknown facts and numerical text in model prose, then inserts the exact application-calculated values, dates, and units. General climate knowledge is separately labeled. This reduces unsupported numerical claims; qualitative AI explanations still require scientific judgment.
+Gemini generates explanations and selects verified evidence IDs. TerraLens removes unsupported citations and numerical claims from model prose, then inserts exact application-calculated values, dates, and units. If no explanation survives validation, it returns a concise summary assembled from verified dataset evidence. General climate knowledge is separately labeled. This reduces unsupported numerical claims; qualitative AI explanations still require scientific judgment.
 
 Questions and statistical evidence are sent to Google Gemini only when the user sends a message, clicks Ask AI, or requests AI Insights. NASA fetches and ordinary chart changes do not generate paid AI calls. The supplied API key and raw provider errors are never returned by the API.
 

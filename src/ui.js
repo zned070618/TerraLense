@@ -58,13 +58,13 @@ export function initNavigation() {
   const button = document.querySelector("#mobileMenu"),
     scrim = document.querySelector("#navScrim");
   const close = () => {
-    document.body.classList.remove("mobile-nav-open");
+    document.body.classList.remove("mobile-nav-open", "app-menu-open");
     button.setAttribute("aria-expanded", "false");
     scrim.hidden = true;
   };
   button.addEventListener("click", () => {
-    const open = !document.body.classList.contains("mobile-nav-open");
-    document.body.classList.toggle("mobile-nav-open", open);
+    const open = !document.body.classList.contains("app-menu-open");
+    document.body.classList.toggle("app-menu-open", open);
     button.setAttribute("aria-expanded", String(open));
     scrim.hidden = !open;
   });
@@ -85,9 +85,13 @@ export function initNavigation() {
         link.title = link.textContent.trim();
       });
     });
-  const links = [...document.querySelectorAll("#sideNav a")];
+  const links = [
+    ...document.querySelectorAll(
+      "#sideNav a, .application-nav a[data-section]",
+    ),
+  ];
   links.forEach((link) => link.addEventListener("click", close));
-  const sections = [...document.querySelectorAll("section[data-nav]")];
+  const sections = [...document.querySelectorAll('section[data-nav]:not(#explore)')];
   const updateActiveSection = () => {
     const activationLine = window.innerHeight * 0.3;
     const atPageBottom =
@@ -104,8 +108,15 @@ export function initNavigation() {
     }
     if (!activeSection) return;
 
+    if (
+      document.body.classList.contains("app-mode") &&
+      location.hash !== `#${activeSection.id}`
+    )
+      history.replaceState(null, "", `#${activeSection.id}`);
+
     links.forEach((link) => {
-      const active = link.hash === `#${activeSection.id}`;
+      const active =
+        link.hash === `#${activeSection.id}` && link.hasAttribute("data-section");
       link.classList.toggle("active", active);
       if (active) link.setAttribute("aria-current", "location");
       else link.removeAttribute("aria-current");

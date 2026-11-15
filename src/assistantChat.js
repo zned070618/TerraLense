@@ -217,18 +217,29 @@ export function createAssistantChat() {
   availability();
   render();
   suggestions();
-  assistantSession()
-    .then((session) => {
+  async function connect(attempt = 0) {
+    try {
+      const session = await assistantSession();
       configured = session.configured;
       $("#aiProvider").textContent = session.configured
         ? `Gemini / ${session.model}`
         : "Gemini not configured";
+      $("#aiProvider").removeAttribute("title");
       availability();
       suggestions();
-    })
-    .catch(() => {
-      $("#aiProvider").textContent = "AI backend offline";
-    });
+    } catch (error) {
+      configured = false;
+      $("#aiProvider").textContent =
+        attempt < 4 ? "AI server unavailable — retrying" : "AI backend offline";
+      $("#aiProvider").title = error.message;
+      availability();
+      suggestions();
+      // Recover automatically if the local Node service starts after the page.
+      const delay = attempt < 4 ? [1000, 2000, 4000, 8000][attempt] : 30000;
+      setTimeout(() => connect(Math.min(attempt + 1, 4)), delay);
+    }
+  }
+  connect();
   return {
     setContext(next) {
       const changed = context?.datasetId !== next.datasetId;

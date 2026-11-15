@@ -5,7 +5,7 @@ export function renderOverview() {
   }
 
   mountPoint.outerHTML = `
-    <section class="hero section" id="explore" data-nav="Overview">
+    <section class="hero section cinematic-hero" id="explore" data-nav="Home">
       <div class="hero-copy">
         <p class="eyebrow">
           <span class="status-dot"></span> A NEW PERSPECTIVE ON OUR PLANET
@@ -16,11 +16,11 @@ export function renderOverview() {
           into a deeper understanding of our changing planet.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="#investigate"
+          <a class="btn primary" href="#investigate" data-enter-app
             ><i data-icon="globe"></i>Explore the Earth<i
               data-icon="arrow-right"
             ></i></a
-          ><a class="btn secondary" href="#history"
+          ><a class="btn secondary" href="#history" data-enter-app
             ><i data-icon="chart"></i>View climate data</a
           >
         </div>
@@ -29,9 +29,13 @@ export function renderOverview() {
           ><span><i data-icon="layers"></i>5 climate parameters</span
           ><span><i data-icon="globe"></i>Global coverage</span>
         </div>
+        <div class="hero-note">
+          <span class="hero-note-line"></span>
+          <span>OBSERVE THE PLANET<br /><strong>UNDERSTAND THE CHANGE</strong></span>
+        </div>
         <img
           class="landing-logo"
-          src="./assets/terralense-logo.png"
+          src="./assets/terralens-logo.png"
           alt="TerraLens — See a brighter Earth"
           width="180"
           height="120"
@@ -43,7 +47,7 @@ export function renderOverview() {
           ><span class="hud-tag">3D / INTERACTIVE</span>
         </div>
         <div class="globe-loading" id="globeLoading">
-          <img src="./assets/terralense-logo.png" alt="TerraLens" /><span
+          <img src="./assets/terralens-logo.png" alt="TerraLens" /><span
             class="spinner"
           ></span
           ><span>Preparing your perspective...</span>
@@ -55,7 +59,7 @@ export function renderOverview() {
         ></canvas>
         <div class="globe-fallback" id="globeFallback" hidden>
           3D Earth is unavailable.
-          <a href="#investigate">Explore with the 2D map.</a>
+          <a href="#investigate" data-enter-app>Explore with the 2D map.</a>
         </div>
         <div class="globe-bottom">
           <div>
@@ -87,7 +91,7 @@ export function renderOverview() {
         </div>
       </div>
     </section>
-    <div class="context-strip">
+    <div class="context-strip landing-context-strip">
       <div>
         <i data-icon="pin"></i
         ><span

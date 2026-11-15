@@ -41,6 +41,7 @@ export async function createEarthGlobe({
   resetButton,
   loading,
   fallback,
+  cinematic = false,
 }) {
   let renderer;
   try {
@@ -55,7 +56,9 @@ export async function createEarthGlobe({
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 80);
-    camera.position.copy(latLngVector(location.lat, location.lng, 7.3));
+    camera.position.copy(
+      latLngVector(location.lat, location.lng, cinematic ? 9.2 : 7.3),
+    );
     scene.add(camera);
     const sun = new THREE.DirectionalLight(0xd8f3ff, 2.2);
     sun.position.set(-3, 3, 5);
@@ -73,7 +76,9 @@ export async function createEarthGlobe({
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     let paused = reduced.matches,
       lastInteraction = -Infinity,
-      focusTarget = null,
+      focusTarget = cinematic
+        ? latLngVector(location.lat, location.lng, 7.3)
+        : null,
       selected = { ...location };
     const updatePause = () => {
       pauseButton.setAttribute("aria-pressed", String(paused));
